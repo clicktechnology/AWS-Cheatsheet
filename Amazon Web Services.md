@@ -1,7 +1,8 @@
 
 # AMAZON AWS
 
-| Term | Expansion | Real life |
+## Platforms and LAN
+| Term | Expansion/Meaning | Example/Real life |
 |-------|------------|-----------|
 | Region | A geographical place | US-WEST-1 |
 | Availability Zone | A datacentre in a Region | US-WEST-1A, US-WEST-1B, US-WEST-1C |
@@ -14,23 +15,37 @@
 | VPC | Virtual Private Cloud | VLAN |
 | VPG | Virtual Private Gateway | VPN Host |
 | IGW | Internet Gateway | Router / Firewall |
-| AWS Direct Connect | E1/E3 Fibre leased line |
+| AWS Direct Connect | Direct Fibre Connection | E1/E3 Fibre leased line |
 | Security Group | Stateful instance access control group | iptables -m owner --gid-owner somegroup |
 | Network ACLS | Stateless control list | ciscorouter(config)#access-list 101 deny icmp any any |
+
+## Storage
+| Term | Expansion/Meaning | Example/Real life |
+|-------|------------|-----------|
 | Amazon EBS | Elastic Block Store | Hard disks attached directly to the instance physical machine. |
-| Amazon EBS | EBS Volume | Partition on an EBS |
-| Instance Storage | VM (EC2 instance) runs on temporary VDisk |
+| Amazon EBS Volume | Partition on an EBS |
+| Amazon EFS | Elastic File System | Linux Logical Volume Manager (LVM) |
+| Instance Storage | VM (EC2 instance) runs on temporary VDisk | vdisk |
 | Amazon S3 | Object Storage | SSD storage for things that won't get edited, eg images, pdfs, fixed data tc. |
 | Amazon S3IA | Infrequent Access | HDD Storage on old disks on old hardware. Available data, but slow. |
 | Amazon S3 Glacier | Ooooold data | Tape robot |
-| Amazon EFS | Elastic File System | Linux Logical Volume Manager (LVM) |
+
+
+## Databases
+| Term | Expansion/Meaning | Example/Real life |
+|-------|------------|-----------|
 | Amazon RDS | Relational Database Service | Postgres, MySQL servers |
 | Amazon Dynamo | NoSQL Database | Mongo, CouchDB |
 | Amazon Redshift | Data warehouse | Search data you're already finished with. |
 | Amazon DMS | Database Migration Services | Move your data to the cloud, switch engines too if needed / ake db copies for dev. |
+| AWS Neptune | GraphQL Database | GraphQL |
+
+## Other..
+| Term | Expansion/Meaning | Example/Real life |
+|-------|------------|-----------|
 | Amazon Route53 | DNS with extras | bind9 |
 | Amazon Organisations | Manage multiple AWS accounts for billing / usage / policy etc. |
-| Amazon Artifact | Standards Compliance is a thing. Inherit your compliance standards from Amazon nfrastructure |
+| Amazon Artifact | Inherit your compliance standards from Amazon infrastructure |
 | AWS Shield | DDOS protection |
 | Amazon Inspector | Auto audit your setups for mistakes |
 | Amazon Guard Duty | Threat identification |
@@ -39,9 +54,8 @@
 | AWS Lex | Bots |
 | AWS SageMaker | Machine Learning |
 | Amazon WAF | Well Architechted Framework |
-| AWS Neptune | GraphQL Database |
-| Amazon A2I | Amazon Augmented AI (Amazon A2I) provides built-in human review workflows for common machine learning use cases, such as content moderation and text extraction from documents.
-
+| Amazon A2I | Amazon Augmented AI (Amazon A2I) provides built-in human review workflows for machine learning use cases.
+| Amazon Quicksight | The most popular cloud-native, serverless BI service |
 
 
 # AMAZON AWS - 5 Pillars of Well Architected Framework
@@ -114,8 +128,8 @@ https://docs.aws.amazon.com/wellarchitected/latest/sustainability-pillar/images/
           Data Storage | Code efficiency | Utilisation and Scaling
     -------------------------------------------------------------------
                Servers | Cooling | Water | Waste
-                    Data Centres | Building
-              Electricity Supply | Materials
+                            Data Centres | Building
+                      Electricity Supply | Materials
     -------------------------------------------------------------------
 
 > Written with [StackEdit](https://stackedit.io/).
