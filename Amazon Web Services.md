@@ -1,6 +1,8 @@
 
 # AMAZON AWS
 
+Amazon Web Services is quite easy to learn.  Here's a cheatsheet for AWS with a translation for what each item is in the real world. 
+
 ## Platforms and LAN
 | Term | Expansion/Meaning | Example/Real life |
 |-------|------------|-----------|
